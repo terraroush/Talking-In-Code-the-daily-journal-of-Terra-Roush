@@ -1,0 +1,12 @@
+header {
+    display: flex;
+}
+.logoBox {
+    display: flex;
+    width: 130px;
+}
+
+.logoPic {
+    width: 100%;
+    height: auto;
+}

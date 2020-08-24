@@ -1,1 +1,17 @@
 @import "header.css";
+@import "footer.css";
+@import "form.css";
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    margin-top: auto;
+}
+
+.main {
+    flex: 1 0 auto;
+}

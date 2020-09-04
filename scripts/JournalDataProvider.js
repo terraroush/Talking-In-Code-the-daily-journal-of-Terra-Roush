@@ -35,6 +35,27 @@ const entriesArr = [
         concept: "Filtering Source Data into Smaller Arrays",
         entry: "We rebuilt our dom content after iterating our array for more specific objects.",
         mood: "determined"
+    },
+    {
+        id: 5,
+        date: "09/01/2020",
+        concept: "Decoupling",
+        entry: "This was completely new information. It was/is a lot still to digest. The purpose makes sense; the execution I'm still iffy on.",
+        mood: "tired"
+    },
+    {
+        id: 6,
+        date: "09/02/2020",
+        concept: "JSON server/API",
+        entry: "We learned how to create our own API with Postman.",
+        mood: "happy"
+    },
+    {
+        id: 7,
+        date: "09/03/2020",
+        concept: ".filter() method",
+        entry: "We learned to filter arrays of objects.",
+        mood: "nervous"
     }
 ]
 

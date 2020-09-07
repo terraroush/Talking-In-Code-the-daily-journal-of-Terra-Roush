@@ -3,7 +3,7 @@ export const JournalEntryHTML = (entryObj) => {
         <section id="entry--${entryObj.id}" class="journalEntry">
             ${entryObj.concept}
             ${entryObj.entry}
-            ${entryObj.date}
+            ${new Date(entryObj.date).toLocaleDateString("en-US")}
         </section>
     `;
 };

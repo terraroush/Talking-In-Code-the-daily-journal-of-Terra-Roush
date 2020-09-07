@@ -1,7 +1,7 @@
 import { EntryList } from "./JournalEntryList.js"
 import { useEntries } from "./JournalDataProvider.js";
-import { render } from "./JournalEntryForm.js";
+import { JournalForm } from "./JournalEntryForm.js";
 
-render();
+JournalForm();
 EntryList();
 useEntries();

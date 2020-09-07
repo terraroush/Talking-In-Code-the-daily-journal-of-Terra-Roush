@@ -1,5 +1,10 @@
 const eventHub = document.querySelector(".container");
 
+const dispatchStateChangeEvent = () => {
+    const journalStateChanged = (new CustomEvent("journalStateChanged"))
+
+    eventHub.dispatchEvent(journalStateChanged)
+}
 
 let journalEntries = [];
 
@@ -14,14 +19,14 @@ export const useEntries = () => {
   return journalEntries.slice();
 };
 
-/*
-    You export a function that provides a version of the
-    raw data in the format that you want
-*/
-// export const useJournalEntries = () => {
-//     const sortedByDate = entriesArr.sort(
-//         (currentEntry, nextEntry) =>
-//             Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
-//     )
-//     return sortedByDate
-// }
+export const saveEntry = (newEntryObj) => {
+    fetch("http://localhost:8088/entries", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newEntryObj)
+    })
+        .then(getEntries)
+        .then(dispatchStateChangeEvent)
+}

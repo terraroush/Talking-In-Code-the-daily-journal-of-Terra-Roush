@@ -55,6 +55,13 @@
       "date": 1599508065770,
       "mood": "happy",
       "id": 8
+    },
+    {
+      "concept": "ERDs",
+      "entry": "Today we watched several videos portraying the importance of separate data structures in databases. We practiced creating ERDs on DB diagram. ",
+      "date": 1600287373785,
+      "mood": "encouraged",
+      "id": 9
     }
   ]
 }

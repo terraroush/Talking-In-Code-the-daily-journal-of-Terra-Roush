@@ -62,6 +62,13 @@
       "date": 1600287373785,
       "mood": "encouraged",
       "id": 9
+    },
+    {
+      "concept": "One to Many Relationship",
+      "entry": "Today we worked out a 1-many relationship within our notes code in Glassdale. Essentially we gave each noteObj a unique ID, so that our database is tracking that ID as opposed to a name. A name could change in the future, but that number will stay the same.",
+      "date": 1600379666012,
+      "mood": "tired",
+      "id": 10
     }
   ]
 }

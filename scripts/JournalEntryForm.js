@@ -1,5 +1,5 @@
-import { getEntries, useEntries, saveEntry } from "./JournalDataProvider.js"
-
+import { getEntries, useEntries, saveEntry } from "./JournalDataProvider.js";
+import { getMoods, useMoods } from "./MoodProvider.js";
 
 const eventHub = document.querySelector(".container");
 const contentTarget = document.querySelector(".form-container")
@@ -14,13 +14,13 @@ eventHub.addEventListener("click", (clickEvent) => {
             concept: entryConcept.value,
             entry: entryText.value,
             date: Date.now(),
-            mood: entryMood.value,
+            mood: entryMood.label,
         };
         saveEntry(newEntry);
     }
 })
 
- export const JournalForm = () => {
+const render = allMoods => {
      contentTarget.innerHTML = `
      <form class="form-container" action="">
             <fieldset>
@@ -38,14 +38,12 @@ eventHub.addEventListener("click", (clickEvent) => {
             <fieldset>
                 <label for="mood">Mood of the Day</label>
                 <select name="mood" id="mood">
-                    <option value="happy">happy</option>
-                    <option value="sad">sad</option>
-                    <option value="confused">confused</option>
-                    <option value="determined">determined</option>
-                    <option value="tired">tired</option>
-                    <option value="encouraged">encouraged</option>
-                    <option value="excited">excited</option>
-                    <option value="nervous">nervous</option>
+                ${allMoods
+                    .map(mood => {
+                        return `<option value="${ mood.id }">${ mood.label }</option>`
+                        }
+                    ).join("")
+                }
                 </select>
             </fieldset>
             <div class="submitContainer">
@@ -56,7 +54,8 @@ eventHub.addEventListener("click", (clickEvent) => {
  }
 
  export const EntryForm = () => {
-     getEntries().then(() => {
+     getEntries()
+     .then(() => {
          render(useEntries())
      })
  }

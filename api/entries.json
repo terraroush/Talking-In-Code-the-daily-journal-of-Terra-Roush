@@ -5,70 +5,178 @@
       "date": "08/18/2020",
       "concept": "Object Representation of Things",
       "entry": "We turned our fish in hard-coded html and turned them into object data types.",
-      "moodId": "determined"
+      "moodId": 7,
+      "mood": {
+        "id": 7,
+        "label": "excited"
+      }
     },
     {
       "id": 2,
       "date": "08/19/2020",
       "concept": "Fundamental Workshops",
       "entry": "We learned how to set up components such as data provider, list and html rep.",
-      "moodId": "happy"
+      "moodId": 1,
+      "mood": {
+        "id": 1,
+        "label": "happy"
+      }
     },
     {
       "id": 3,
       "date": "08/20/2020",
       "concept": "Debugger",
       "entry": "We fixed errors in code with the begugger.",
-      "moodId": "nervous"
+      "moodId": 3,
+      "mood": {
+        "id": 3,
+        "label": "confused"
+      }
     },
     {
       "id": 4,
       "date": "08/21/2020",
       "concept": "Filtering Source Data into Smaller Arrays",
       "entry": "We rebuilt our dom content after iterating our array for more specific objects.",
-      "moodId": "determined"
+      "moodId": 7,
+      "mood": {
+        "id": 7,
+        "label": "excited"
+      }
     },
     {
       "id": 5,
       "date": "09/01/2020",
       "concept": "Decoupling",
       "entry": "This was completely new information. It was/is a lot still to digest. The purpose makes sense; the execution I'm still iffy on.",
-      "moodId": "tired"
+      "moodId": 6,
+      "mood": {
+        "id": 6,
+        "label": "encouraged"
+      }
     },
     {
       "id": 6,
       "date": "09/02/2020",
       "concept": "JSON server/API",
       "entry": "We learned how to create our own API with Postman.",
-      "moodId": "happy"
+      "moodId": 6,
+      "mood": {
+        "id": 6,
+        "label": "encouraged"
+      }
     },
     {
       "id": 7,
       "date": "09/03/2020",
       "concept": ".filter() method",
       "entry": "We learned to filter arrays of objects.",
-      "moodId": "nervous"
+      "moodId": 8,
+      "mood": {
+        "id": 8,
+        "label": "nervous"
+      }
     },
     {
       "id": 8,
       "concept": "fetching with json",
       "entry": "This is me practicing using a fetch call",
       "date": 1599508065770,
-      "moodId": "happy"
+      "moodId": 9,
+      "mood": {
+        "id": 9,
+        "label": "ambivalent"
+      }
     },
     {
       "id": 9,
       "concept": "ERDs",
       "entry": "Today we watched several videos portraying the importance of separate data structures in databases. We practiced creating ERDs on DB diagram. ",
       "date": 1600287373785,
-      "moodId": "encouraged"
+      "moodId": 5,
+      "mood": {
+        "id": 5,
+        "label": "tired"
+      }
     },
     {
       "id": 10,
       "concept": "One to Many Relationship",
       "entry": "Today we worked out a 1-many relationship within our notes code in Glassdale. Essentially we gave each noteObj a unique ID, so that our database is tracking that ID as opposed to a name. A name could change in the future, but that number will stay the same.",
       "date": 1600379666012,
-      "moodId": "tired"
+      "moodId": 4,
+      "mood": {
+        "id": 4,
+        "label": "determined"
+      }
+    },
+    {
+      "id": 11,
+      "concept": "Deleting with APIs",
+      "entry": "Today's lecture seemed straight-forward and simple. I'm wary of overconfidence...",
+      "date": 1600454514817,
+      "moodId": 6,
+      "mood": {
+        "id": 6,
+        "label": "encouraged"
+      }
+    },
+    {
+      "id": 12,
+      "concept": "test",
+      "entry": "test",
+      "date": 1600457887360,
+      "moodId": 1,
+      "mood": {
+        "id": 1,
+        "label": "happy"
+      }
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "label": "happy"
+    },
+    {
+      "id": 2,
+      "label": "sad"
+    },
+    {
+      "id": 3,
+      "label": "confused"
+    },
+    {
+      "id": 4,
+      "label": "determined"
+    },
+    {
+      "id": 5,
+      "label": "tired"
+    },
+    {
+      "id": 6,
+      "label": "encouraged"
+    },
+    {
+      "id": 7,
+      "label": "excited"
+    },
+    {
+      "id": 8,
+      "label": "nervous"
+    },
+    {
+      "id": 9,
+      "label": "ambivalent"
+    },
+    {
+      "id": 10,
+      "label": "overjoyed"
+    },
+    {
+      "id": 11,
+      "label": "hungry"
     }
   ]
 }

@@ -1,8 +1,6 @@
 import { getEntries, useEntries } from "./JournalDataProvider.js";
 import { JournalEntryHTML } from "./JournalEntry.js";
 
-const eventHub = document.querySelector(".container");
-
 const render = (entryCollection) => {
   const contentTarget = document.querySelector("#entryLog");
   let HTMLArray = entryCollection.map((entryObj) => {

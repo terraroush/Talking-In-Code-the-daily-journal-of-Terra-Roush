@@ -21,6 +21,12 @@ eventHub.addEventListener("click", (clickEvent) => {
 })
 
 const render = allMoods => {
+    getMoods()
+        .then(() => {
+        const moodArray = useMoods()
+    
+        })
+
      contentTarget.innerHTML = `
      <form class="form-container" action="">
             <fieldset>
@@ -38,8 +44,7 @@ const render = allMoods => {
             <fieldset>
                 <label for="mood">Mood of the Day</label>
                 <select name="mood" id="mood">
-                ${allMoods
-                    .map(mood => {
+                ${allMoods.map(mood => {
                         return `<option value="${ mood.id }">${ mood.label }</option>`
                         }
                     ).join("")

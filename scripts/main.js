@@ -1,7 +1,9 @@
 import { EntryList } from "./JournalEntryList.js"
 import { useEntries } from "./JournalDataProvider.js";
-import { JournalForm } from "./JournalEntryForm.js";
+import { EntryForm } from "./JournalEntryForm.js";
 
-JournalForm();
+
+
 EntryList();
 useEntries();
+EntryForm();

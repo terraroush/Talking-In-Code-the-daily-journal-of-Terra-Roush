@@ -131,6 +131,12 @@
         "id": 1,
         "label": "happy"
       }
+    },
+    {
+      "concept": "Test in Patience",
+      "entry": "I spent all weekend trying to figure out why my moods weren't rendering to the select. I FINALLY used a debugger successfully and skillfully. I found where the code went wrong and was able to fix it. Damn. Life is good!",
+      "date": 1600653899018,
+      "id": 13
     }
   ],
   "moods": [

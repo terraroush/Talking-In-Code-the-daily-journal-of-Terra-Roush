@@ -4,139 +4,106 @@
       "id": 1,
       "date": "08/18/2020",
       "concept": "Object Representation of Things",
-      "entry": "We turned our fish in hard-coded html and turned them into object data types.",
-      "moodId": 7,
-      "mood": {
-        "id": 7,
-        "label": "excited"
-      }
+      "entry": "We took our hard-coded html fish and turned them into object data types.",
+      "moodId": 7
     },
     {
       "id": 2,
       "date": "08/19/2020",
       "concept": "Fundamental Workshops",
       "entry": "We learned how to set up components such as data provider, list and html rep.",
-      "moodId": 1,
-      "mood": {
-        "id": 1,
-        "label": "happy"
-      }
+      "moodId": 1
     },
     {
       "id": 3,
       "date": "08/20/2020",
       "concept": "Debugger",
       "entry": "We fixed errors in code with the begugger.",
-      "moodId": 3,
-      "mood": {
-        "id": 3,
-        "label": "confused"
-      }
+      "moodId": 3
     },
     {
       "id": 4,
       "date": "08/21/2020",
       "concept": "Filtering Source Data into Smaller Arrays",
       "entry": "We rebuilt our dom content after iterating our array for more specific objects.",
-      "moodId": 7,
-      "mood": {
-        "id": 7,
-        "label": "excited"
-      }
+      "moodId": 7
     },
     {
       "id": 5,
       "date": "09/01/2020",
       "concept": "Decoupling",
       "entry": "This was completely new information. It was/is a lot still to digest. The purpose makes sense; the execution I'm still iffy on.",
-      "moodId": 6,
-      "mood": {
-        "id": 6,
-        "label": "encouraged"
-      }
+      "moodId": 6
     },
     {
       "id": 6,
       "date": "09/02/2020",
       "concept": "JSON server/API",
       "entry": "We learned how to create our own API with Postman.",
-      "moodId": 6,
-      "mood": {
-        "id": 6,
-        "label": "encouraged"
-      }
+      "moodId": 6
     },
     {
       "id": 7,
       "date": "09/03/2020",
       "concept": ".filter() method",
       "entry": "We learned to filter arrays of objects.",
-      "moodId": 8,
-      "mood": {
-        "id": 8,
-        "label": "nervous"
-      }
+      "moodId": 8
     },
     {
       "id": 8,
       "concept": "fetching with json",
       "entry": "This is me practicing using a fetch call",
       "date": 1599508065770,
-      "moodId": 9,
-      "mood": {
-        "id": 9,
-        "label": "ambivalent"
-      }
+      "moodId": 9
     },
     {
       "id": 9,
       "concept": "ERDs",
       "entry": "Today we watched several videos portraying the importance of separate data structures in databases. We practiced creating ERDs on DB diagram. ",
       "date": 1600287373785,
-      "moodId": 5,
-      "mood": {
-        "id": 5,
-        "label": "tired"
-      }
+      "moodId": 5
     },
     {
       "id": 10,
       "concept": "One to Many Relationship",
       "entry": "Today we worked out a 1-many relationship within our notes code in Glassdale. Essentially we gave each noteObj a unique ID, so that our database is tracking that ID as opposed to a name. A name could change in the future, but that number will stay the same.",
       "date": 1600379666012,
-      "moodId": 4,
-      "mood": {
-        "id": 4,
-        "label": "determined"
-      }
+      "moodId": 4
     },
     {
       "id": 11,
       "concept": "Deleting with APIs",
       "entry": "Today's lecture seemed straight-forward and simple. I'm wary of overconfidence...",
       "date": 1600454514817,
-      "moodId": 6,
-      "mood": {
-        "id": 6,
-        "label": "encouraged"
-      }
+      "moodId": 6
     },
     {
-      "id": 12,
-      "concept": "test",
-      "entry": "test",
-      "date": 1600457887360,
-      "moodId": 1,
-      "mood": {
-        "id": 1,
-        "label": "happy"
-      }
-    },
-    {
+      "id": 13,
       "concept": "Test in Patience",
       "entry": "I spent all weekend trying to figure out why my moods weren't rendering to the select. I FINALLY used a debugger successfully and skillfully. I found where the code went wrong and was able to fix it. Damn. Life is good!",
       "date": 1600653899018,
-      "id": 13
+      "moodId": 10
+    },
+    {
+      "id": 14,
+      "concept": "Many to Many Relationships",
+      "entry": "We began the lesson by creating an ERD out of a few prompts regarding legos. We discovered a many users to many blocks relationship. It makes sense while going over it in the group. I'm still a touch hazy. ",
+      "date": 1600719373211,
+      "moodId": 11
+    },
+    {
+      "concept": "dry",
+      "entry": "eary",
+      "date": 1600799140948,
+      "moodId": 4,
+      "id": 15
+    },
+    {
+      "concept": "test",
+      "entry": "i am testing this feature",
+      "date": 1600801418463,
+      "moodId": 6,
+      "id": 16
     }
   ],
   "moods": [

@@ -4,25 +4,29 @@ import { getMoods, useMoods } from "./MoodProvider.js";
 const eventHub = document.querySelector(".container");
 
 eventHub.addEventListener("click", (clickEvent) => {
-    if (clickEvent.target.id === "submit") {
-        const entryConcept = document.querySelector("#concepts")
-        const entryText = document.querySelector("#journalText")
-        const entryMood = document.querySelector("#mood")
-        
-        const newEntry = {
-            concept: entryConcept.value,
-            entry: entryText.value,
-            date: Date.now(),
-            mood: entryMood.label,
-        };
-        saveEntry(newEntry);
-    }
-})
+  clickEvent.preventDefault();
+  if (clickEvent.target.id === "submit") {
+    let entryConcept = document.querySelector("#concepts");
+    let entryText = document.querySelector("#journalText");
+    let entryMood = document.querySelector("#mood");
+    let date = Date.now()
 
-const render = moodCollection => {
-    const contentTarget = document.querySelector(".form-container")
-    
-     contentTarget.innerHTML = `
+    const newEntry = {
+      concept: entryConcept.value,
+      entry: entryText.value,
+      date: date,
+      moodId: parseInt(entryMood.value)
+    };
+   EntryForm()
+
+    saveEntry(newEntry);
+  }
+});
+
+const render = (moodCollection) => {
+  const contentTarget = document.querySelector(".form-container");
+
+  contentTarget.innerHTML = `
      <form class="form-container" action="">
             <fieldset>
                 <label for="journalDate">Date of Entry</label>
@@ -39,24 +43,22 @@ const render = moodCollection => {
             <fieldset>
                 <label for="mood">Mood of the Day</label>
                 <select name="mood" id="mood">
-                ${moodCollection.map(mood => {
-                    
-                        return `<option value="${ mood.id }">${ mood.label }</option>`
-                        }
-                    ).join("")
-                }
+                ${moodCollection
+                  .map((mood) => {
+                    return `<option value="${mood.id}">${mood.label}</option>`;
+                  })
+                  .join("")}
                 </select>
             </fieldset>
             <div class="submitContainer">
-                <input type="submit" id="submit" name="submit" value="Record Journal Entry">   
+                <input id="submit" name="submit" value="Record Journal Entry">   
             </div>
         </form>
-     `
- }
+     `;
+};
 
- export const EntryForm = () => {
-     getMoods()
-     .then(() => {
-         render(useMoods())
-     })
- }
+export const EntryForm = () => {
+  getMoods().then(() => {
+    render(useMoods());
+  });
+};

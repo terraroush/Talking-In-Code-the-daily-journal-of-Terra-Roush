@@ -1,4 +1,4 @@
-import { getEntries, useEntries } from "./JournalDataProvider.js";
+import { getEntries, useEntries, deleteEntry } from "./JournalDataProvider.js";
 import { JournalEntryHTML } from "./JournalEntry.js";
 import { useMoods, getMoods } from "./MoodProvider.js";
 
@@ -9,6 +9,13 @@ eventHub.addEventListener("journalStateChanged", () => {
   const newEntries = useEntries();
   render(newEntries, useMoods());
 });
+
+eventHub.addEventListener("click", e => {
+  if (e.target.id.startsWith("deleteBtn--")) {
+    const [prefix, id] = e.target.id.split("--")
+    deleteEntry(id)
+  }
+})
 
 export const EntryList = () => {
   getEntries()

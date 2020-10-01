@@ -51,7 +51,7 @@ const render = (moodCollection) => {
                 </select>
             </fieldset>
             <div class="submitContainer">
-                <input id="submit" name="submit" value="Record Journal Entry">   
+                <input id="submit" name="submit" value="record journal entry">   
             </div>
         </form>
      `;

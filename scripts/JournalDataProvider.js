@@ -19,7 +19,7 @@ export const useEntries = () => {
   return journalEntries.slice();
 };
 
-export const saveEntry = (newEntryObj) => {
+export const saveEntry = newEntryObj => {
   fetch("http://localhost:8088/entries?_expand=mood", {
     method: "POST",
     headers: {
@@ -30,3 +30,10 @@ export const saveEntry = (newEntryObj) => {
     .then(getEntries)
     .then(dispatchStateChangeEvent);
 };
+
+export const deleteEntry = entryId => {
+  return fetch(`http://localhost:8088/entries/${entryId}`, {
+      method: "DELETE"
+  })
+  .then(dispatchStateChangeEvent)
+}

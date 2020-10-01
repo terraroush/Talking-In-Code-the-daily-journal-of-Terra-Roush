@@ -5,7 +5,7 @@ export const JournalEntryHTML = (entryObj) => {
             <h4>${entryObj.concept}:</h4>
             <p>I'm feeling ${entryObj.moodObj.label}</p>
             <p>${entryObj.entry}</p>
+            <button id="deleteBtn--${entryObj.id}" class="deleteBtn" type="button">delete</button>
         </section>
-        <button id="deleteBtn--${entryObj.id}" class="deleteBtn" type="button">delete</button>
     `;
 };

@@ -1,13 +1,12 @@
-import { MoodFilter } from "./MoodFilter.js"
+import { MoodFilter } from "./MoodFilter.js";
+import { getMoods, useMoods } from "../MoodProvider.js";
 
-const contentTarget = document.querySelector(".filters")
+const contentTarget = document.querySelector(".filters");
 
-const FilterBar = () => {
-    render = () => {
-        contentTarget.innerHTML = `
-            ${MoodFilter()}
-        `
-    }
-
-    render()
-}
+export const FilterBar = () => {
+  getMoods().then(() => {
+    contentTarget.innerHTML = `
+            ${MoodFilter(useMoods())}
+        `;
+  });
+};

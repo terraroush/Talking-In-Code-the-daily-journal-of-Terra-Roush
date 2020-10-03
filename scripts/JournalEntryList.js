@@ -27,6 +27,7 @@ export const EntryList = () => {
   });
 };
 
+// this function takes two parameters, an array of entry objects, and an array of mood objects; it maps the entries array, for each entry it also searches for when the entry's moodId is the same as the single mood item's id. it assigns each moodId to moodObj of the entry
 const render = (entryCollection, moodArray) => {
   let HTMLArray = entryCollection.map((entryObj) => {
     entryObj.moodObj = moodArray.find((item) => {

@@ -3,6 +3,7 @@
 @import "form.css";
 @import "cards.css";
 @import "collection.css";
+@import "filters.css";
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
 html, body {

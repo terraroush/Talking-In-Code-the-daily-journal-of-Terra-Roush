@@ -17,7 +17,7 @@ eventHub.addEventListener("click", (clickEvent) => {
       date: date,
       moodId: parseInt(entryMood.value)
     };
-   EntryForm()
+   reset()
 
     saveEntry(newEntry);
   }

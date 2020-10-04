@@ -19,7 +19,7 @@ eventHub.addEventListener("click", (e) => {
     };
    EntryForm()
 
-    saveEntry(newEntry);
+   saveEntry(newEntry);
   }
 });
 

@@ -20,14 +20,15 @@ eventHub.addEventListener("click", e => {
 })
 
 eventHub.addEventListener("moodChosen", e => {
-  const thisMood = e.detail.theChosenMoodId;
+  const singleMood = e.detail.theChosenMoodId;
   const entries = useEntries();
+  const appStateMoods = useMoods();
   const matchingMoods = entries.filter((entry) => {
-    if (entry.moodId === +thisMood) {
+    if (entry.moodId === +singleMood) {
       return true;
     }
   });
-  render(matchingMoods);
+  render(matchingMoods, appStateMoods);
 });
 
 export const EntryList = () => {
@@ -36,7 +37,7 @@ export const EntryList = () => {
   .then(() => {
     const appStateEntries = useEntries();
     const appStateMoods = useMoods();
-    render(appStateEntries, appStateMoods);
+    // render(appStateEntries, appStateMoods);
   });
 };
 
@@ -48,5 +49,6 @@ const render = (entryCollection, moodArray) => {
     })
     return JournalEntryHTML(entryObj);
   });
+  contentTarget.innerHTML = "";
   contentTarget.innerHTML += HTMLArray.join("");
 };

@@ -5,7 +5,6 @@ const eventHub = document.querySelector(".container");
 
 // listen for the submit button: if it's clicked, make a "new entry" from the field values, and store them in a variable. Clear the form/re-render the form, and save the entry to the database
 eventHub.addEventListener("click", (e) => {
-  e.preventDefault();
   if (e.target.id === "submit") {
     let entryConcept = document.querySelector("#concepts");
     let entryText = document.querySelector("#journalText");
@@ -52,7 +51,7 @@ const render = (moodCollection) => {
                 </select>
             </fieldset>
             <div class="submitContainer">
-                <input id="submit" name="submit" value="record journal entry">   
+                <button id="submit" name="submit" value="record journal entry">record journal entry</button>   
             </div>
         </form>
      `;

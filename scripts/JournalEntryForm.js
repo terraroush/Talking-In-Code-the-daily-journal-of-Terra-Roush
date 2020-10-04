@@ -3,9 +3,9 @@ import { getMoods, useMoods } from "./MoodProvider.js";
 
 const eventHub = document.querySelector(".container");
 
-eventHub.addEventListener("click", (clickEvent) => {
-  clickEvent.preventDefault();
-  if (clickEvent.target.id === "submit") {
+// listen for the submit button: if it's clicked, make a "new entry" from the field values, and store them in a variable. Clear the form/re-render the form, and save the entry to the database
+eventHub.addEventListener("click", (e) => {
+  if (e.target.id === "submit") {
     let entryConcept = document.querySelector("#concepts");
     let entryText = document.querySelector("#journalText");
     let entryMood = document.querySelector("#mood");
@@ -19,7 +19,7 @@ eventHub.addEventListener("click", (clickEvent) => {
     };
    EntryForm()
 
-    saveEntry(newEntry);
+   saveEntry(newEntry);
   }
 });
 
@@ -51,7 +51,7 @@ const render = (moodCollection) => {
                 </select>
             </fieldset>
             <div class="submitContainer">
-                <input id="submit" name="submit" value="record journal entry">   
+                <button id="submit" name="submit" value="record journal entry">record journal entry</button>   
             </div>
         </form>
      `;

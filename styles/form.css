@@ -5,5 +5,8 @@ fieldset {
 .form {
     display: flex;
     flex-direction: column;
-    width: 65%;
+}
+
+.form-container {
+   max-width: 60%;
 }

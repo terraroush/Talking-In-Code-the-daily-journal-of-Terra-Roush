@@ -5,17 +5,30 @@ import { useMoods, getMoods } from "./MoodProvider.js";
 const eventHub = document.querySelector(".container");
 const contentTarget = document.querySelector("#entryLog");
 
+// listen for this custom event, when it's triggered, render entries and moods
 eventHub.addEventListener("journalStateChanged", () => {
   const newEntries = useEntries();
   render(newEntries, useMoods());
 });
 
+// listen for a click on a delete button. Get the id of the delete button and delete it using the delete call to the database
 eventHub.addEventListener("click", e => {
   if (e.target.id.startsWith("deleteBtn--")) {
     const [prefix, id] = e.target.id.split("--")
     deleteEntry(id)
   }
 })
+
+eventHub.addEventListener("moodChosen", e => {
+  const thisMood = e.detail.theChosenMoodId;
+  const entries = useEntries();
+  const matchingMoods = entries.filter((entry) => {
+    if (entry.moodId === +thisMood) {
+      return true;
+    }
+  });
+  render(matchingMoods);
+});
 
 export const EntryList = () => {
   getEntries()
